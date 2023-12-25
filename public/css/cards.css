@@ -1,0 +1,20 @@
+.card {
+	background-color: white;
+
+	border-color: black;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: .3em;
+
+	width: 3.3em;
+	height: 4.6em;
+
+	padding: .25em;
+	margin: 0 .5em .5em 0;
+}
+
+/* Suits */
+
+.card.heart .card.diamond {
+	color: red;
+}
