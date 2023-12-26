@@ -17,13 +17,13 @@
     "no-tabs": "off",
 		"no-self-assign": "off",
     "no-unused-vars": [
-			"off", {
+			"warn", {
 				"vars": "local",
 				"varsIgnorePattern": "^_",
 				"args": "after-used"
 			}
 		],
-		"prefer-const": "off",
+		"prefer-const": "warn",
 		"space-before-function-paren": ["warn", "never"],
 		"yoda": [
 			"warn",
