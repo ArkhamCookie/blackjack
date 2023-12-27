@@ -2,6 +2,56 @@ export class Card {
 	constructor(rank, suit) {
 		this.rank = rank
 		this.suit = suit
+
+		/**
+		 * @see {@link https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Block=Playing_Cards:]}
+		 */
+		let unicode = '1F0'
+
+		switch (suit) {
+		case 'clubs':
+			unicode = unicode + 'D'
+			break
+		case 'diamonds':
+			unicode = unicode + 'C'
+			break
+		case 'hearts':
+			unicode = unicode + 'B'
+			break
+		case 'spades':
+			unicode = unicode + 'A'
+			break
+		default:
+			Error('Invaild suit')
+			break
+		}
+
+		switch (rank) {
+		case ('A'):
+			unicode = unicode + '1'
+			break
+		case ('10'):
+			unicode = unicode + 'A'
+			break
+		case ('J'):
+			unicode = unicode + 'B'
+			break
+		case ('Q'):
+			unicode = unicode + 'D'
+			break
+		case ('K'):
+			unicode = unicode + 'E'
+			break
+		default:
+			if (rank > 1 && rank <= 9) {
+				rank.toString()
+				unicode = unicode + rank
+			}
+			Error('Invaild rank')
+			break
+		}
+		this.unicode = unicode
+		this.html = '&#x' + this.unicode
 	}
 
 	random() {
