@@ -1,0 +1,40 @@
+{
+	"imports": {
+		"assert": "https://deno.land/std@0.210.0/assert/mod.ts"
+	},
+	"exclude": [
+		"**/node_modules/",
+		"**/out/"
+	],
+	"lint": {
+		"include": [],
+		"exclude": [],
+		"rules": {
+			"tags": [
+				"recommended"
+			],
+			"exclude": [],
+			"include": []
+		}
+	},
+	"fmt": {
+		"include": [],
+		"exclude": [],
+		"useTabs": true,
+		"lineWidth": 80,
+		"indentWidth": 4,
+		"semiColons": false,
+		"proseWrap": "preserve",
+		"singleQuote": true
+	},
+	"nodeModulesDir": true,
+	"vendor": false,
+	"tasks": {},
+	"test": {
+		"include": [
+			"./tests/*.js"
+		]
+	},
+	"bench": {},
+	"lock": true
+}
