@@ -1,4 +1,10 @@
 export class Card {
+	/**
+	 * @class Card
+	 *
+	 * @param {string|number} rank - Card's rank/score
+	 * @param {string} suit - Card's suit
+	 */
 	constructor(rank, suit) {
 		this.rank = rank
 		this.suit = suit
@@ -54,6 +60,9 @@ export class Card {
 		this.html = '&#x' + this.unicode
 	}
 
+	/**
+	 * Creates a random card
+	 */
 	random() {
 		switch (Math.floor(Math.random() * 3)) {
 		case (0):
@@ -90,6 +99,11 @@ export class Card {
 		}
 	}
 
+	/**
+	 * Returns a human-readable version of the card.
+	 *
+	 * @returns {string}
+	 */
 	toString() {
 		switch (this.rank) {
 		case 'J':
