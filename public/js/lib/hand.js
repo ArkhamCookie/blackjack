@@ -25,8 +25,4 @@ export class Hand {
 		this.hand.splice(index, 1)
 		return true
 	}
-
-	toString() {
-		return this.hand.toString()
-	}
 }
