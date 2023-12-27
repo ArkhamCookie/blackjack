@@ -1,7 +1,7 @@
 export class Card {
-	constructor(suit, rank) {
-		this.suit = suit
+	constructor(rank, suit) {
 		this.rank = rank
+		this.suit = suit
 	}
 
 	random() {
