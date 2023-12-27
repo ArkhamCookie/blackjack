@@ -5,7 +5,6 @@ export class Card {
 	}
 
 	random() {
-		// const randomSuit =
 		switch (Math.floor(Math.random() * 3)) {
 		case (0):
 			this.suit = 'clubs'
