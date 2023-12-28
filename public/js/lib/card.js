@@ -12,20 +12,20 @@ export class Card {
 		/**
 		 * @see {@link https://util.unicode.org/UnicodeJsps/list-unicodeset.jsp?a=[:Block=Playing_Cards:]}
 		 */
-		let unicode = '1F0'
+		let code = '1F0'
 
 		switch (suit) {
 		case 'clubs':
-			unicode = unicode + 'D'
+			code = code + 'D'
 			break
 		case 'diamonds':
-			unicode = unicode + 'C'
+			code = code + 'C'
 			break
 		case 'hearts':
-			unicode = unicode + 'B'
+			code = code + 'B'
 			break
 		case 'spades':
-			unicode = unicode + 'A'
+			code = code + 'A'
 			break
 		default:
 			Error('Invaild suit')
@@ -34,30 +34,30 @@ export class Card {
 
 		switch (rank) {
 		case ('A'):
-			unicode = unicode + '1'
+			code = code + '1'
 			break
 		case ('10'):
-			unicode = unicode + 'A'
+			code = code + 'A'
 			break
 		case ('J'):
-			unicode = unicode + 'B'
+			code = code + 'B'
 			break
 		case ('Q'):
-			unicode = unicode + 'D'
+			code = code + 'D'
 			break
 		case ('K'):
-			unicode = unicode + 'E'
+			code = code + 'E'
 			break
 		default:
 			if (rank > 1 && rank <= 9) {
 				rank.toString()
-				unicode = unicode + rank
+				code = code + rank
 			}
 			Error('Invaild rank')
 			break
 		}
-		this.unicode = unicode
-		this.html = '&#x' + this.unicode
+		this.unicode = '\\u' + code
+		this.html = '&#x' + code
 	}
 
 	/**
