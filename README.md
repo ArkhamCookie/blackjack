@@ -1,6 +1,6 @@
 # Blackjack
 
-The backend code takes inspiration from [node-cards](https://github.com/kbjr/node-cards) and [js-playing-cards](https://github.com/daryllukas/js-playing-cards)
+The backend code takes inspiration from [node-cards](https://github.com/kbjr/node-cards) and [js-playing-cards](https://github.com/daryllukas/js-playing-cards).
 
 ## Licensing
 
