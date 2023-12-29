@@ -18,3 +18,9 @@ Deno.test('Card: toString()', () => {
 	const card = new Card('10', 'clubs')
 	assertEquals(card.toString(), '10 of clubs')
 })
+
+Deno.test('Card: unicode', () => {
+	const card = new Card('10', 'clubs')
+	assertEquals(card.unicode, '\\u1F0DA')
+	assertEquals(card.html, '&#x1F0DA')
+})
