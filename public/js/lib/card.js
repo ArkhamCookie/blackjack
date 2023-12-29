@@ -79,7 +79,7 @@ export class Card {
 			break
 		}
 
-		const randomRank = Math.floor(Math.random() * 3 + 1)
+		const randomRank = Math.floor(Math.random() * 13 + 1)
 		switch (randomRank) {
 		case (1):
 			this.rank = 'A'
