@@ -16,14 +16,25 @@ function getValue(cardRank, high) {
 	}
 }
 
+const card = new Card()
+
 export function initDeal() {
 	let handValue = 0
-	const card = new Card()
 
-	for (let i = 0; i < 2; i++) {
+	for (let i = 0; i <= 2; i++) {
 		card.random()
 		handValue = getValue(card.rank, false) + handValue
 	}
 
 	return handValue
+}
+
+export function bustcheck(hand) {
+	if (hand > 21) {
+		return 0
+	}
+}
+
+export function hit() {
+	return card.random()
 }
