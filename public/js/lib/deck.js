@@ -32,7 +32,5 @@ export class Deck {
 			this.dealtCards++
 			this.cardsRemaining--
 		}
-
-		return this.deck[this.dealtCards - 1]
 	}
 }
