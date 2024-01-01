@@ -32,3 +32,18 @@ Deno.test('Deck: deal cards', () => {
 	assertEquals(deck.cardsRemaining, 48)
 	assertEquals(deck.dealtCards, 4)
 })
+
+Deno.test('Deck: multiple deck', () => {
+	let deck = new Deck(2)
+
+	assertEquals(deck.cardsRemaining, 104)
+
+	deck = new Deck(4)
+
+	assertEquals(deck.cardsRemaining, 208)
+
+	deck.deal(8)
+
+	assertEquals(deck.cardsRemaining, 200)
+	assertEquals(deck.dealtCards, 8)
+})
