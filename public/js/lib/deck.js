@@ -6,11 +6,7 @@ export class Deck {
 			'J', 'Q', 'K', 'A'
 		]
 		this.deck = []
-		if (typeof (deckAmount) === 'number') {
-			this.deckAmount = deckAmount
-		} else {
-			this.deckAmount = 1
-		}
+		if (!deckAmount) { deckAmount = 1 }
 		this.cardsRemaining = 52 * deckAmount
 		this.dealtCards = 0
 	}
