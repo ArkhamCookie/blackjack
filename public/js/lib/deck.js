@@ -23,12 +23,15 @@ export class Deck {
 		this.cardsRemaining = 52
 	}
 
-	deal() {
+	deal(count) {
+		if (!count) { count = 1 }
 		if (this.dealtCards === this.deck.length) {
 			Error('No more cards to deal')
 		}
-		this.dealtCards++
-		this.cardsRemaining--
+		for (let i = 0; i < count; i++) {
+			this.dealtCards++
+			this.cardsRemaining--
+		}
 
 		return this.deck[this.dealtCards - 1]
 	}
